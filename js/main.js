@@ -1,9 +1,12 @@
-let name = window.prompt("Enter your name: ")
-document.getElementById("name").innerHTML += name;
 let playerParty = [];
 let rivalParty = [];
 
 // Setting up the "party" for each team
+
+const setName = () => {
+    let name = window.prompt("Enter your name: ")
+    document.getElementById("name").innerHTML += name;
+}
 
 const pickPokemon = () => {
     let pokemon1 = window.prompt("Pick your 1st Pokemon: ")
@@ -12,11 +15,15 @@ const pickPokemon = () => {
     
     // Will have an image of pokemon, click to add to party
 
-    console.log(pokemon1)
-    console.log(pokemon2)
-    console.log(pokemon3)
+    document.getElementById("1st").innerHTML = pokemon1;
+    document.getElementById("2nd").innerHTML = pokemon2;
+    document.getElementById("3rd").innerHTML = pokemon3;
 }
 
-window.onload = () => {
+setNameButton.addEventListener("click", () => {
+    setName()
+});
+
+pickPokemonButton.addEventListener("click", () => {
     pickPokemon()
-}
+});
