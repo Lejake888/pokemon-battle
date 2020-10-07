@@ -21,6 +21,11 @@ const pickPokemon = () => {
     document.getElementById("1st").innerHTML = pokemon1;
     document.getElementById("2nd").innerHTML = pokemon2;
     document.getElementById("3rd").innerHTML = pokemon3;
+    generateTeam(pokemon1, pokemon2, pokemon3)
+}
+
+const generateTeam = (p1,p2,p3) => {
+
 }
 
 // The functions below will run when the linked button is clicked
