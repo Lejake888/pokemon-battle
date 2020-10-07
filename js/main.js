@@ -12,13 +12,18 @@ const pickPokemon = () => {
     let pokemon1 = window.prompt("Pick your 1st Pokemon: ")
     let pokemon2 = window.prompt("Pick your 2nd Pokemon ")
     let pokemon3 = window.prompt("Pick your 3rd Pokemon: ")
-    
+    playerParty.push(pokemon1)
+    playerParty.push(pokemon2)
+    playerParty.push(pokemon3)
+
     // Will have an image of pokemon, click to add to party
 
     document.getElementById("1st").innerHTML = pokemon1;
     document.getElementById("2nd").innerHTML = pokemon2;
     document.getElementById("3rd").innerHTML = pokemon3;
 }
+
+// The functions below will run when the linked button is clicked
 
 setNameButton.addEventListener("click", () => {
     setName()
